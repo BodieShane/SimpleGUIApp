@@ -30,7 +30,7 @@ public class GUIPanel extends JPanel
 		
 		baseLayout = new SpringLayout();
 		firstButton = 
-				new JButton("Please do not click the button");
+				new JButton("Please do not hold down the Alt key");
 		
 		firstTextField = new JTextField ("Words can be typed here");
 		
@@ -110,7 +110,19 @@ public class GUIPanel extends JPanel
 			{
 				public void mouseMoved(MouseEvent moved)
 				{
-					changeRandomColor();
+					if(moved.isAltDown())
+					{
+						changeRandomColor();
+					}
+					
+					if(moved.getY() >= (firstButton.getY() -5) && moved.getY() <= (firstButton.getY() + 5)&&
+							moved.getX() >= (firstButton.getX() - 5) && moved.getX() <= (firstButton.getX() + 5))
+					{
+						firstButton.setLocation((int) (Math.random() * 30), (int) (Math.random()* 400));
+					}
+						
+					// NEVER USE THIS
+					//changeRandomColor();
 				}
 				
 				public void mouseDragged(MouseEvent dragged)
