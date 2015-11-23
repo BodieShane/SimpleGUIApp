@@ -5,7 +5,10 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
+
 import gui.controller.GUIAppController;
+
+import java.awt.Color;
 import java.awt.event.*;
 /**
  * @author bsha6756
@@ -53,6 +56,16 @@ public class GUIPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.NORTH, firstTextField, 41, SpringLayout.SOUTH, firstButton);
 		baseLayout.putConstraint(SpringLayout.WEST, firstTextField, 116, SpringLayout.WEST, this);
 	}
+	private void changeRandomColor()
+	{
+		int red,green,blue;
+		red = (int) (Math.random() * 256);
+		green = (int) (Math.random() * 256);
+		blue = (int) (Math.random() * 256);
+		
+		this.setBackground(new Color(red,green,blue));
+				
+	}
 	
 	private void setupListeners()
 	{
@@ -63,10 +76,7 @@ public class GUIPanel extends JPanel
 			
 		}
 		
-		public void mouseRelease(MouseEvent released)
-		{
-			
-		}
+	
 		
 		public void mousePressed(MouseEvent pressed)
 		{
@@ -74,13 +84,24 @@ public class GUIPanel extends JPanel
 		}
 		
 	
-		public void mousEntered(MouseEvent enterd)
-		{
-			
-		}
+	
 		
 		public void mouseExited(MouseEvent exited)
 		{
+			
+		}
+
+		
+		public void mouseReleased(MouseEvent Released)
+		{
+			
+			
+		}
+
+		
+		public void mouseEntered(MouseEvent Entered)
+		{
+			
 			
 		}
 	});
