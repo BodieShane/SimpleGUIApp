@@ -69,42 +69,57 @@ public class GUIPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		this.addMouseListener(new MouseListener()
-	{
-		public void mouseClicked(MouseEvent click)
-		{
-			
-		}
+			this.addMouseListener(new MouseListener()
+			{
+				public void mouseClicked(MouseEvent click)
+				{
+					
+				}
 		
 	
 		
-		public void mousePressed(MouseEvent pressed)
-		{
-			
-		}
+				public void mousePressed(MouseEvent pressed)
+				{
+					
+				}
 		
 	
 	
 		
-		public void mouseExited(MouseEvent exited)
-		{
-			
-		}
+				public void mouseExited(MouseEvent exited)
+				{
+					//	changeRandomColor();
+				}
 
 		
-		public void mouseReleased(MouseEvent Released)
-		{
+				public void mouseReleased(MouseEvent Released)
+				{
+			//		changeRandomColor();
 			
-			
-		}
+				}
 
 		
-		public void mouseEntered(MouseEvent Entered)
-		{
-			
-			
-		}
+				public void mouseEntered(MouseEvent Entered)
+				{
+					//	changeRandomColor();
+					
+				}
 	});
+	
+			this .addMouseMotionListener(new MouseMotionListener()
+			{
+				public void mouseMoved(MouseEvent moved)
+				{
+					changeRandomColor();
+				}
+				
+				public void mouseDragged(MouseEvent dragged)
+				{
+					//changeRandomColor();
+				}
+				
+			});
+	
 	}
 	
 	
